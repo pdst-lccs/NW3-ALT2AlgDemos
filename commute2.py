@@ -35,10 +35,10 @@ plotly.offline.plot({           #https://plot.ly/python/getting-started/#initial
 '''
 
 # Initialise the values to display on the x-axis
-x_axis = [0] * len(int_array)
-for i in range(len(int_array)):
-    x_axis[i] = i   
-x_axis = [i for i in range(len(int_array))]
+x_axis = []
+for i in range (len(int_array)):
+    x_axis.append(i)  
+
 # x_axis = [i for i in range(len(int_array))] # alternative
 
 # Plot a bar chart
@@ -46,9 +46,5 @@ plt.bar(x_axis, int_array)
 
 plt.title("Bar Chart Demo") # graph title
 plt.ylabel("Average Commute Times") # label the y-axis
-# put the names of the subjects on the x-axis
-#plt.xticks(range(len(subjects)), subjects, rotation=45)
 
 plt.show() # Display the plot
-
-
